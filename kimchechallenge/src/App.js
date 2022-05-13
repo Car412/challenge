@@ -1,21 +1,19 @@
 import React from "react";
 import "./App.css";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-} from "@apollo/client";
-
-import Countries from "./components/countries";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "@apollo/react-hooks";
+import Home from "./components/home";
 
 const client = new ApolloClient({
-  uri: "https://countries.trevorblades.com/",
-  cache: new InMemoryCache(),
+  uri: "https://countries.trevorblades.com/",  
 });
 
 const App = () => (
   <ApolloProvider client={client}>
-    <Countries/>
+    <div>      
+      <Home/>
+    </div>
   </ApolloProvider>
 );
+
 export default App;
