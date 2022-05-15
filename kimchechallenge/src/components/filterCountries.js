@@ -2,10 +2,10 @@ import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import Country from "./country";
 import { Button } from "react-bootstrap";
+import estilos from "../styles/filter.module.css"
 
 export default function FilterCountries(props) {
   const types = ["Continent", "Language"];
-  const [active, setActive] = React.useState(types[0]);
   const { loading, error, data } = useQuery(props.getcountries);
 
   if (loading) return <p>Loading...</p>;
@@ -17,14 +17,12 @@ export default function FilterCountries(props) {
 
   return (
     <>
-      <div className="groups">
-        <h2>Group by:</h2>
+      <div className={estilos.contenedor}>
+        <h4>Group by:</h4>
         {types.map((type) => (
           <Button
-            variant="outline-secondary"
-            key={type}
-            active={active === type}
-            onClick={() => setActive(type)}
+            variant="outline-primary"
+            key={type}           
           >
             {type}
           </Button>
@@ -32,15 +30,16 @@ export default function FilterCountries(props) {
       </div>
       {filteredCountries.map((c) => {
         return (
+          <div>
           <Country
             key={c.name}
-            capital={c.capital}
             name={c.name}
             emoji={c.emoji}
+            capital={c.capital}
             continent={c.continent.name}
-            languages={c.languages}
-            active={active}
+            languages={c.languages}            
           />
+          </div>
         );
       })}
     </>

@@ -1,0 +1,13 @@
+.contenedor{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    align-items: center;
+    font-style: italic;
+    text-shadow: rgb(98, 101, 233);
+    text-decoration: wavy;
+}

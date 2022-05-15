@@ -1,6 +1,7 @@
 import React from "react";
 import { gql } from "apollo-boost";
 import FilterCountries from "./filterCountries";
+import estilos from "../styles/home.module.css";
 
 
 export default function Home() {
@@ -28,15 +29,17 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <h1>Countries</h1>
-      <h3>You can filter countries by Continent or Language: </h3>
-    <div>
+    <div classname={estilos.contenedor}>
+      <h1 className={estilos.h1}>Countries</h1>
+      {/* <h3>You can filter countries by Continent or Language: </h3> */}
+      <div className={estilos.input}>
       <input
         type="text"
         placeholder="Country name..."
         onChange={(e) => handleInputChange(e)}
-      /> 
+        /> 
+    </div>
+      <div className={estilos.div}>
       <FilterCountries getcountries={getcountries} country={country} />
     </div>
     </div>

@@ -1,21 +1,20 @@
-import {gql} from "@apollo/client";
+/* import { gql } from "apollo-boost";
 
-const getCountries = gql `
-query countries {
-    countries{
+const getCountries = gql`
+  query countries {
+    countries {
+      name
+      capital
+      continent {
         name
-        capital
-        continent{
-            name
-        }
-        languages{
-            name
-        }
-        emoji
-        emojiU
-
+      }
+      languages {
+        name
+      }
+      emoji
+      emojiU
     }
-}
+  }
 `;
 
-export default getCountries;
+export default getCountries; */

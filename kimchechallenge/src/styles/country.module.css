@@ -1,0 +1,26 @@
+.contenedor{
+    margin-left: 20px;
+    margin-top: 25px;
+    height: 160px;
+    width: 200px;
+    backdrop-filter: blur(6px);    
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: rgba(97, 97, 110, 0.794) 0px 7px 29px 0px;
+    border: 2px solid rgb(98, 101, 233);    
+    opacity: 85%;
+    align-items: stretch;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.name{
+    font-style: unset;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: rgb(98, 101, 233);
+    text-decoration: underline;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
