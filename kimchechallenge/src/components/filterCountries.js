@@ -4,8 +4,8 @@ import Country from "./country";
 import estilos from "../styles/filter.module.css";
 
 export default function FilterCountries(props) {
-  const types = ["Continent", "Language"];
-  const [active, setActive] = React.useState(types[0]);
+  const options = ["Continent", "Language"];
+  const [active, setActive] = React.useState(options[0]);
   const { loading, error, data } = useQuery(props.getcountries);
 
   if (loading) return <p>Loading...</p>;
@@ -20,24 +20,23 @@ export default function FilterCountries(props) {
         <h5>
           <strong>Group by:</strong>
         </h5>
-        {types.map((type) => (
+        {options.map((op) => (
           <button
-            key={type}
-            active={active === type}
-            onClick={() => setActive(type)}
+            key={op}
+            active={active === op}
+            onClick={() => setActive(op)}
             className={estilos.boton}
           >
-            {type}
+            {op}
           </button>
         ))}
       </div>
       {filteredCountries.map((c) => {
         return (
           <Country
-            key={c.code}
-            capital={c.capital}
-            currency={c.currency}
+            key={c.name}
             name={c.name}
+            capital={c.capital}
             emoji={c.emoji}
             continent={c.continent.name}
             languages={c.languages}

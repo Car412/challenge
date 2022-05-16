@@ -2,12 +2,11 @@ import React from "react";
 import estilos from "../styles/country.module.css";
 
 export default function Country(props) {
-  //props.languages[0] === undefined ? console.log(props) : console.log(props.languages[0].name)
   return (
     <div>
-      {props.active === "Continent" ? <h3>{props.continent}</h3> : ""}
+      {props.active === "Continent" ? <h4>{props.continent}</h4> : ""}
       {props.active === "Language" && props.languages[0] !== undefined ? (
-        <h3>{props.languages[0].name}</h3>
+        <h4>{props.languages[0].name}</h4>
       ) : (
         ""
       )}
