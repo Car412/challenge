@@ -1,28 +1,31 @@
 import React from "react";
-import estilos from "../styles/country.module.css"
+import estilos from "../styles/country.module.css";
 
 export default function Country(props) {
+  //props.languages[0] === undefined ? console.log(props) : console.log(props.languages[0].name)
   return (
     <div>
-      {props.active === "Continent" ? <h2>{props.continent}</h2> : ""}
+      {props.active === "Continent" ? <h3>{props.continent}</h3> : ""}
       {props.active === "Language" && props.languages[0] !== undefined ? (
-        <h1>{props.languages[0].name}</h1>
+        <h3>{props.languages[0].name}</h3>
       ) : (
         ""
       )}
       <div className={estilos.contenedor}>
-        <h3 className={estilos.name}>{props.name} - {props.emoji}</h3>        
-      <h6>
-        Capital: {props.capital}
-        <br />
-        Continent: {props.continent}
-        <br />
-        Languages:{" "}
-        {props.languages !== undefined
-          ? props.languages.map((language) => language.name).join(", ")
-          : "No official languages"}
-      </h6>
+        <h2 className={estilos.name}>
+          {props.name} - {props.emoji}
+        </h2>
+        <div className={estilos.h6}>
+          <h6>
+            Capital: {props.capital}
+            <br />
+            Languages:{" "}
+            {props.languages !== undefined
+              ? props.languages.map((language) => language.name).join(", ")
+              : "No official languages"}
+          </h6>
+        </div>
+      </div>
     </div>
-          </div>
   );
 }

@@ -1,13 +1,22 @@
 .contenedor{
     display: flex;
-    flex-direction:row;
     align-items: center;
-    justify-content: center;
 }
 
-.name{
-    align-items: center;
-    font-style: italic;
-    text-shadow: rgb(98, 101, 233);
-    text-decoration: wavy;
+.boton{
+    width:20%;
+    height:30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 15%;
+    background-color:#577ecb;
+    color: white;
+    cursor: pointer;
+    border-color: rgb(171, 167, 167);
+    border-style: ridge;
+}
+
+.boton:hover{
+    color: #577ecb;
+    background-color: white;
 }

@@ -1,49 +1,8 @@
 .contenedor{
-    display: flex;   
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; 
-    /* min-height: 100vh;
-    min-width: 100vh;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;   
-    background-image: url('https://img.freepik.com/free-vector/flat-color-minimalist-abstract-background_144684-54.jpg'); */
-       
-}
-
-.h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-    color: rgba(219, 205, 243, 0.979);
-    font-size: 55px;
-    top: 1px;    
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
-}
-
-.h3{
-    font-style: oblique;
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
-}
-
-.input{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.div{
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width:50%;
+    height:30px;
+    border-radius: 5px;
+    background-color: white;
+    border-style: solid;   
+    margin-left: 25%; 
 }
