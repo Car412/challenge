@@ -34,7 +34,8 @@ export default function Home() {
         onChange={(e) => handleChange(e)}
         placeholder="Country name..."
       />
-      <FilterCountries getcountries={getcountries} country={country} />
+      <br/>
+      <FilterCountries getcountries={getcountries} country={country}/>
     </div>
   );
 }

@@ -11,7 +11,7 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <div>
+    <div  className="App-back">
       <div>
         <h1 className="App-header">Country Search</h1>
         </div>      
