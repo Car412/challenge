@@ -11,10 +11,10 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <div  className="App-back">
+    <div  className="container">
       <div>
         <h1 className="App-header">Country Search</h1>
-        </div>      
+        </div>   
       <Home/>
     </div>
   </ApolloProvider>

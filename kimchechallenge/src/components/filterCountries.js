@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import Country from "./country";
 import estilos from "../styles/filter.module.css";
+import {Button} from "react-bootstrap"
 
 export default function FilterCountries(props) {
   const options = ["Continent", "Language"];
@@ -21,14 +22,14 @@ export default function FilterCountries(props) {
           <strong>Group by:</strong>
         </h5>
         {options.map((op) => (
-          <button
+          <Button
             key={op}
             active={active === op}
             onClick={() => setActive(op)}
             className={estilos.boton}
           >
             {op}
-          </button>
+          </Button>
         ))}
       </div>
       {filteredCountries.map((c) => {
