@@ -5,6 +5,11 @@ Link a la app en producción: [LINK DEL DEPLOY]
 
 Pregunta abierta: "La tabla que contiene la información correspondiente a la asistencia diaria de un niño en un colegio tiene 90 millones de filas. Todas las tablas del sistema existen en la misma BDD en MySQL. La lógica del backend que actualiza la información correspondiente al pasar la asistencia tiene un tiempo de servicio p95 de 10 segundos. El equipo está interesado en bajar este tiempo para mejorar la experiencia del usuario (y porque nos gusta pensar en Kimche como un Ferrari). ¿Qué propondrías para enfrentar el problema? Esta pregunta es abierta, no hay respuestas malas. Puedes proponer arquitectura, tecnologías, diseño, etc."
 
+Respuesta: Por lo que he podido investigar, una posible solución para enfrentar dicho problema sería implementar una base de datos no relacional. Hasta ahora no me ha tocado trabajar con ella, pero encontré como opción MongoDB:
+- Es eficaz al momento de manejar grandes volúmenes de información.
+- Al no ser relacionales, quedan descartados los 'joins' de las tablas relacionales, que suelen relentizar las consultas; resutado: mejor performance y consultas más rápidas.
+
+
 ## Instrucciones
 
 Debes crear un buscador de países consultando el [siguiente grafo](https://countries.trevorblades.com/). Este código contiene una base para seguir con la aplicación en React y ApolloClient. Queda a disposición tuya cualquier cambio, ya sea de estructura, estilo, etc.
